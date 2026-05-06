@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>아카이브에 없는 페이지 · Page Not in Archive</title>
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: linear-gradient(135deg, #f6f7fb 0%, #eaeefb 100%);
+    color: #111;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    line-height: 1.6;
+  }
+  .card {
+    background: #fff;
+    max-width: 720px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 56px 48px;
+    box-shadow: 0 24px 64px rgba(54, 107, 240, 0.12);
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #366bf0;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    margin-bottom: 28px;
+  }
+  .badge::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+  h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+  }
+  .subtitle {
+    color: #5b6373;
+    font-size: 17px;
+    margin-bottom: 32px;
+  }
+  .url {
+    background: #f6f7fb;
+    border: 1px solid #e1e6f3;
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 14px;
+    color: #366bf0;
+    word-break: break-all;
+    margin-bottom: 32px;
+  }
+  .explain {
+    color: #4a5263;
+    font-size: 15px;
+    margin-bottom: 36px;
+    padding: 18px 22px;
+    background: #f9fafe;
+    border-left: 3px solid #366bf0;
+    border-radius: 6px;
+  }
+  .explain strong { color: #111; }
+  .actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.2s ease;
+  }
+  .btn-primary {
+    background: #366bf0;
+    color: #fff;
+  }
+  .btn-primary:hover {
+    background: #2856d8;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(54, 107, 240, 0.3);
+  }
+  .btn-secondary {
+    background: #f6f7fb;
+    color: #111;
+    border: 1px solid #e1e6f3;
+  }
+  .btn-secondary:hover {
+    background: #eaeefb;
+  }
+  .footnote {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid #eaeefb;
+    color: #8c8c8c;
+    font-size: 13px;
+    text-align: center;
+  }
+  @media (max-width: 600px) {
+    .card { padding: 36px 28px; }
+    h1 { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="badge">ARCHIVE SNAPSHOT · 2026.01–02</div>
+    <h1>이 페이지는 아카이브에 없습니다</h1>
+    <p class="subtitle">This page wasn't captured in the archive snapshot.</p>
+    <div class="url" id="requested-url">—</div>
+    <div class="explain">
+      <strong>왜 이런 메시지가 보이나요?</strong><br>
+      이 사이트는 2026년 1월–2월에 Wayback Machine이 부분적으로 수집한 스냅샷입니다.
+      홈페이지와 일부 주요 페이지는 보존되었지만, 메뉴의 모든 페이지가 수집된 것은 아닙니다.
+      <br><br>
+      <strong>Why am I seeing this?</strong><br>
+      This is a partial snapshot captured by the Wayback Machine in Jan–Feb 2026.
+      The home page and some sub-pages were preserved, but not every linked page in the navigation was crawled.
+    </div>
+    <div class="actions">
+      <a href="/_archive_index.html" class="btn btn-primary">
+        ← 아카이브 목록으로 / Archive Index
+      </a>
+      <a href="/" class="btn btn-secondary">
+        홈으로 / Home
+      </a>
+    </div>
+    <div class="footnote">
+      Korea House 2026 · Archive viewer · Captured from web.archive.org
+    </div>
+  </div>
+  <script>
+    document.getElementById('requested-url').textContent = window.location.pathname + window.location.search;
+  </script>
+</body>
+</html>

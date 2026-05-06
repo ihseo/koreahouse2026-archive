@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+/*
+  Masstgie Custom Icons for Board Template
+  This icons made in Icomoon ( https://icomoon.io/ )
+  This icons made ny JTS
+  Last Updated : 2020-07-24
+ */
+
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('icomoon.eot?808pd6');
+  src:  url('icomoon.eot?808pd6#iefix') format('embedded-opentype'),
+  url('icomoon.ttf?808pd6') format('truetype'),
+  url('icomoon.woff?808pd6') format('woff'),
+  url('icomoon.svg?808pd6#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="fi-"], [class*=" fi-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fi-arrow-last:before {
+  content: "\e900";
+}
+.fi-arrow-first:before {
+  content: "\e901";
+}
+.fi-arrow-prev:before {
+  content: "\e902";
+}
+.fi-arrow-next:before {
+  content: "\e903";
+}
+.fi-notice:before {
+  content: "\e904";
+}
+.fi-file-download:before {
+  content: "\e905";
+}
+.fi-caret-up:before {
+  content: "\e906";
+}
+.fi-caret-down:before {
+  content: "\e907";
+}
+.fi-link:before {
+  content: "\e908";
+}
+.fi-download:before {
+  content: "\e909";
+}
+.fi-lock:before {
+  content: "\e90a";
+}
+.fi-plus:before {
+  content: "\e90b";
+}
+.fi-minus:before {
+  content: "\e90c";
+}
